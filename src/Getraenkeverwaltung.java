@@ -107,7 +107,7 @@ public class Getraenkeverwaltung {
                 System.out.println("Das Getraenk " + neugetraenk + " wurde mit dem Bestand von " + neuanzahl
                         + " zum Preis von " + neupreis + " euro hinzugefügt.");
                 break;
-            case 6: //Ausagebe aller Snacks 
+            case 6: //Ausagebe aller Snacks indem die Keys der Snacks ausgegeben werden
                 System.out.println(snack.keySet());
                 break;
             case 7: //Abfrage der Snack Daten, anders als bei den Getraenken muss der gewünchte Snakc ausgefaehlt werden
