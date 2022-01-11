@@ -32,7 +32,7 @@ public class Getraenkeverwaltung {
         System.out.println("Herzlich Willkommen zur Getränkeverwaltung!");
 
         // Main Loop in dem die Software ausgeführt wird.
-        while (i < 10) {
+        while (i < 11) {
             i = 9;
             System.out.println("Der aktuelle Kassenstand ist: " + kasse1.getkassenstand());
             System.out.println("1 = Abfrage aller verfübaren Getraenke");
