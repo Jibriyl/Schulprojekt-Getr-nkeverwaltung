@@ -1,6 +1,7 @@
     class Kasse {
         private double kassenstand;
 
+    //Kassen klasse, speichern, verringern, erhoehen Kassenstand
     public Kasse (double kassenstand){
         this.kassenstand = kassenstand;
     }

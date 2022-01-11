@@ -58,11 +58,13 @@ public class Produkt {
         return x;
     }
 
+    //Berechnet den Preis 
     public double gesamtpreisrechner(int verkaufsmenge){
         double gesamtpreis = verkaufsmenge * this.preis;
         return gesamtpreis;
     }
 
+    //Audrucken des Kassenzettels
     public String kassenzettelDrucken(int verkaufsmenge, double gesamtpreis) {
         String kassenzettel;
            

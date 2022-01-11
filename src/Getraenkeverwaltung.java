@@ -49,10 +49,10 @@ public class Getraenkeverwaltung {
             System.out.println("Was wollen sie tun?");
             i = scan.nextInt();
             switch (i) {
-            case 1:
+            case 1: //Ausgeben aller Keys der Getraenke Map
                 System.out.println(map.keySet());
                 break;
-            case 2:
+            case 2: //Auwal welche Daten der Getraenke ausgegeben werden sollen
                 System.out.println("1 = Preis abfragen");
                 System.out.println("2 = Bestand abfragen");
                 System.out.println("3 = Alkoholgehalt abfragen");
@@ -72,7 +72,7 @@ public class Getraenkeverwaltung {
                     break;
                 }
                 break;
-            case 3:
+            case 3: //Verkaufen der Getraenke
                 System.out.println("Welches Getraenk soll verkauft werden?");
                 String getraenkauswahl = scan.next();
                 System.out.println("Wie viele Getraenke sollen verkauft werden?");
@@ -87,14 +87,14 @@ public class Getraenkeverwaltung {
                     System.out.println("Der bestand reicht nicht aus um die bestellung zu erfüllen.");
                 }
                 break;
-            case 4:
+            case 4: //Lagerbestand der Getraenke erhöhen
                 System.out.println("Von welchem Getraenk ist eine Lieferung angekommen?");
                 String getraenklieferung = scan.next();
                 System.out.println("Wie viele Getraenke wurden geliefert?");
                 int scannerbestellungsanzahl = scan.nextInt();
                 map.get(getraenklieferung).bestanderhoehen(scannerbestellungsanzahl);
                 break;
-            case 5:
+            case 5: //Neues Getraenk hinzufuegen
                 System.out.println("Wie heisst das neue Getraenk?");
                 String neugetraenk = scan.next();
                 System.out.println("Wie viel soll das Getraenk kosten?");
@@ -107,10 +107,10 @@ public class Getraenkeverwaltung {
                 System.out.println("Das Getraenk " + neugetraenk + " wurde mit dem Bestand von " + neuanzahl
                         + " zum Preis von " + neupreis + " euro hinzugefügt.");
                 break;
-            case 6:
+            case 6: //Ausagebe aller Snacks 
                 System.out.println(snack.keySet());
                 break;
-            case 7:
+            case 7: //Abfrage der Snack Daten, anders als bei den Getraenken muss der gewünchte Snakc ausgefaehlt werden
                 System.out.println("1 = Preis abfragen");
                 System.out.println("2 = Bestand abfragen");
                 System.out.println("3+ = Zurück zur Auswahl");
@@ -130,15 +130,13 @@ public class Getraenkeverwaltung {
                     break;
                 }
                 break;
-            case 8:
+            case 8: //Verkauf von Snacks
                 System.out.println("Welcher Snack soll verkauft werden?");
                 String snackauswahl2 = scan.next();
                 System.out.println("Wie viele Snacks sollen verkauft werden?");
                 int snackanzahl = scan.nextInt();
                 if (snack.get(snackauswahl2).bestandabfrage(snackanzahl)) {
                     snack.get(snackauswahl2).bestandverringern(snackanzahl);
-                    // Fragen ob es besser wäre eine Variable für den gesampreis zu erstellen oder
-                    // ob diese Lösung besser ist.
                     System.out.println(snack.get(snackauswahl2).kassenzettelDrucken(snackanzahl,
                             snack.get(snackauswahl2).gesamtpreisrechner(snackanzahl)));
                     kasse1.verkauf(snack.get(snackauswahl2).gesamtpreisrechner(snackanzahl));
@@ -147,14 +145,14 @@ public class Getraenkeverwaltung {
                     System.out.println("Der bestand reicht nicht aus um die bestellung zu erfüllen.");
                 }
                 break;
-            case 9:
+            case 9: //Erhoehen bestand Snacks
                 System.out.println("Von welchem Snack ist eine Lieferung angekommen?");
                 String snacklieferung = scan.next();
                 System.out.println("Wie viele Snacks wurden geliefert?");
                 int scannerbestellungsanzahlsnack = scan.nextInt();
                 snack.get(snacklieferung).bestanderhoehen(scannerbestellungsanzahlsnack);
                 break;
-            case 10:
+            case 10: //Hinzufuegen neuer Snack
                 System.out.println("Wie heisst der neue Snack?");
                 String neusnack = scan.next();
                 System.out.println("Wie viel soll der Snack kosten?");
@@ -165,7 +163,7 @@ public class Getraenkeverwaltung {
                 System.out.println("Der Snack " + neusnack + " wurde mit dem Bestand von " + neuanzahlsnack
                         + " zum Preis von " + neupreissnack + " euro hinzugefügt.");
                 break;
-            default:
+            default: //Bei allen anderen Int eingaben wird Porgramm beendet
                 System.out.println("Programm beendet");
                 break;
             }
