@@ -10,7 +10,7 @@ public class Getraenk extends Produkt{
 
         this.alkoholgehalt = alkoholgehalt;
 
-      }
+    }
 
     public double getalkohol(){
       return this.alkoholgehalt;
